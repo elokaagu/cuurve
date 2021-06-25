@@ -34,7 +34,7 @@ const HeaderContainer = styled.div`
   padding: 10px 20px;
   height: 50px;
   justify-content: space-evenly;
-  background-color: #fff;
+  background-color: transparent;
   border-bottom: 1px solid whitesmoke;
   box-shadow: 10px;
   width: 100%;
