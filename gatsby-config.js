@@ -2,5 +2,15 @@ module.exports = {
   siteMetadata: {
     title: "alpha",
   },
-  plugins: ["gatsby-plugin-styled-components"],
+  plugins: [
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
+    `gatsby-plugin-styled-components`,
+  ],
 };
