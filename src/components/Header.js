@@ -7,16 +7,17 @@ function Header(props) {
     <HeaderContainer>
       <HeaderLeft>
         <Logo
-          src="https://cdn.freelogovectors.net/svg07/revolut-logo.svg"
+          src="https://images.ctfassets.net/q5ulk4bp65r7/3TBS4oVkD1ghowTqVQJlqj/2dfd4ea3b623a7c0d8deb2ff445dee9e/Consumer_Wordmark.svg"
           alt="logo"
         />
       </HeaderLeft>
       <HeaderCenter>
-        <HeaderOption title="Personal" />
-        <HeaderOption title="Business" />
+        <HeaderOption title="Products" />
         <HeaderOption title="Company" />
+        <HeaderOption title="Blog" />
       </HeaderCenter>
       <HeaderRight>
+        <HeaderOption title="Login" />
         <HeaderOption title="Sign in" />
       </HeaderRight>
     </HeaderContainer>
@@ -31,13 +32,29 @@ const HeaderContainer = styled.div`
   top: 0;
   z-index: 100;
   align-items: center;
-  padding: 10px 20px;
-  height: 50px;
+  padding: 25px 25px;
   justify-content: space-evenly;
-  background-color: transparent;
-  border-bottom: 1px solid whitesmoke;
-  box-shadow: 10px;
+
+  box-sizing: border-box;
   width: 100%;
+  font-family: "Basier Circle Medium";
+  letter-spacing: -0.025rem;
+  font-size: 16px;
+  line-height: 24px;
+  /* color: #fff; */
+  color: rgb(25, 28, 31);
+  font-style: normal;
+
+  /* Normal Theming */
+
+  background-color: #fff;
+  border-bottom: 1px solid whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px;
+
+  /* Revolut Theming */
+  /* -webkit-backdrop-filter: blur(16px);
+  background-color: rgba(243, 244, 245, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.11) 0px 1px 0px; */
 `;
 
 const HeaderLeft = styled.div`
@@ -47,8 +64,8 @@ const HeaderLeft = styled.div`
 
 const Logo = styled.img`
   object-fit: contain;
-  height: 30px;
-  margin-right: 20px;
+  height: 20px;
+  cursor: pointer;
 `;
 
 const HeaderCenter = styled.div`

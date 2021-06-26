@@ -5,7 +5,7 @@ function HeaderOption({ title }) {
   return (
     <HeaderOptionContainer>
       <HeaderOptionTitle>
-        <h4>{title}</h4>
+        <span>{title}</span>
       </HeaderOptionTitle>
     </HeaderOptionContainer>
   );
@@ -17,14 +17,16 @@ const HeaderOptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 20px;
-  color: rgb(25, 28, 31);
+  padding-left: 32px;
+  padding-right: 32px;
   cursor: pointer;
-  :hover {
-    color: black;
-  }
+  font-size: 17px;
 `;
 
 const HeaderOptionTitle = styled.div`
-  font-size: 16px;
+  span {
+    :hover {
+      color: #555;
+    }
+  }
 `;

@@ -1,4 +1,34 @@
 @font-face {
-  font-family: "BasierRegular";
+  font-family: "Basier Circle Regular";
   src: url("../fonts/basiercircle-regular-webfont.woff2");
+}
+@font-face {
+  font-family: "Basier Circle Medium";
+  src: url("../fonts/BasierCircle-Medium.otf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Basier Circle Semibold";
+  src: url("../fonts/BasierCircle-SemiBold.otf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Basier Circle Regular";
+  src: url("../fonts/BasierCircle-Regular.otf");
+}
+@font-face {
+  font-family: "Maison Neue Book";
+  src: url("../fonts/MaisonNeue-Book.otf");
+}
+@font-face {
+  font-family: "Maison Neue Medium";
+  src: url("../fonts/MaisonNeue-Medium.otf");
+}
+@font-face {
+  font-family: "Maison Neue Demi";
+  src: url("../fonts/MaisonNeue-Demi.otf");
+}
+@font-face {
+  font-family: "Maison Neue Bold";
+  src: url("../fonts/MaisonNeue-Bold.otf");
 }
