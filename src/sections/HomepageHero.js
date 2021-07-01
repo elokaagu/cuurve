@@ -6,11 +6,14 @@ function HomepageHero(props) {
     <HeroContainer>
       <HeroText>
         <h1>
-          Lead generation <br />
-          for real estate
+          One solution, <br />
+          all things real estate
         </h1>
         Curate high quality leads for your properties, and make your money go
-        further with next generation targeting and retargeting technologies
+        further with next generation targeting and retargeting technologies{" "}
+        <HeroButton>
+          <span>Get started</span>
+        </HeroButton>
       </HeroText>
       <HeroImage
         src="https://drive.google.com/uc?export=view&id=1PRoLtF4rOTaEMbVnawEOAxe3JsRxK1zV"
@@ -40,6 +43,8 @@ const HeroText = styled.div`
   position: relative;
   white-space: pre-wrap;
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
   word-break: break-word;
   h1 {
     font-size: 96px;
@@ -57,4 +62,20 @@ const HeroText = styled.div`
 const HeroImage = styled.img`
   object-fit: contain;
   width: 600px;
+`;
+
+const HeroButton = styled.button`
+  width: 25%;
+  background-color: rgb(25, 28, 31);
+  color: white;
+  border: none;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 20px;
+  cursor: pointer;
+
+  span {
+    font-family: "Basier Circle Medium";
+    font-size: 18px;
+  }
 `;

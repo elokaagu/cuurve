@@ -1,23 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 
-function InfoSection(props) {
+function InfoBanner({ headline, subtitle, button }) {
   return (
     <InfoContainer>
       <InfoText>
-        <h1>Build your brand</h1>
-        No hidden fees, just ease
+        <h1>{headline}</h1>
+        {subtitle}
       </InfoText>
+      <InfoButton>
+        <span>{button}</span>
+      </InfoButton>
     </InfoContainer>
   );
 }
 
-export default InfoSection;
+export default InfoBanner;
 
 const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: left;
+  margin: 20px;
   padding: 30px;
   height: 400px;
   background-color: rgb(25, 28, 31);
@@ -50,5 +54,26 @@ const InfoText = styled.div`
     color: #fff;
     white-space: pre-wrap;
     word-break: break-word;
+  }
+`;
+
+const InfoButton = styled.button`
+  max-width: 150px;
+  color: white;
+  border: none;
+  background-color: rgb(6, 102, 235);
+  margin-top: 20px;
+  border-radius: 999px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  span {
+    font-family: "Basier Circle Medium";
+    font-size: 18px;
+    color: white;
+  }
+  :hover {
+    opacity: 80%;
   }
 `;
