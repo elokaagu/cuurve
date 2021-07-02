@@ -4,6 +4,8 @@ import HomepageHero from "../sections/HomepageHero";
 import "./index.css";
 import styled from "styled-components";
 import InfoSection from "../sections/InfoSection";
+import Footer from "../components/Footer";
+import InfoBanner from "../components/InfoBanner";
 
 function index(props) {
   return (
@@ -13,8 +15,26 @@ function index(props) {
         <Header />
         <AppBody>
           <HomepageHero />
-          <InfoSection />
+          <InfoBanner
+            headline="Build your brand"
+            subtitle="Stand out from other sellers and buyers"
+            text="We use business information to create tailored premium marketing content, including social assets and automated posting."
+            button="Try Cuurve"
+          />
+          <InfoBanner
+            headline="Stand out from the noise"
+            subtitle="Attract high quality leads with an intent to purchase"
+            text="We use social ads and marketing materials to drive pre-qualified leads to listings in your local area with high conversion potential."
+            button="Learn more"
+          />
+          <InfoBanner
+            headline="Nurture your leads"
+            subtitle="With custom drip funnels and email campaigns"
+            text="Share quality content to create business opportunities and establish lasting relationships with prospective buyers and sellers."
+            button="Talk to us"
+          />
         </AppBody>
+        <Footer />
       </AppContainer>
     </div>
   );

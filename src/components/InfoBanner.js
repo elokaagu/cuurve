@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-function InfoBanner({ headline, subtitle, button }) {
+function InfoBanner({ headline, subtitle, text, button }) {
   return (
     <InfoContainer>
       <InfoText>
         <h1>{headline}</h1>
         {subtitle}
+        <p>{text}</p>
       </InfoText>
       <InfoButton>
         <span>{button}</span>
@@ -23,7 +24,7 @@ const InfoContainer = styled.div`
   align-items: left;
   margin: 20px;
   padding: 30px;
-  height: 400px;
+  height: 350px;
   background-color: rgb(25, 28, 31);
   border-radius: 30px;
   cursor: pointer;
@@ -54,6 +55,14 @@ const InfoText = styled.div`
     color: #fff;
     white-space: pre-wrap;
     word-break: break-word;
+  }
+  p {
+    color: white;
+    width: 50%;
+    font-family: "Basier Circle Regular";
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 `;
 

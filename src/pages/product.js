@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Header from "../components/Header";
 import InfoBanner from "../components/InfoBanner";
 import InfoCard from "../components/InfoCard";
+import Footer from "../components/Footer";
 
 function product(props) {
   return (
@@ -13,34 +14,35 @@ function product(props) {
         <AppBody>
           <InfoRow>
             <InfoCard
-              headline="Build your brand to the moon"
-              subtitle=" No hidden fees, just ease - forever"
+              headline="High quality leads delivered straight to your phone"
+              subtitle="No hassle, just ease"
               button="Learn more"
             />
             <InfoCard
-              headline="This is another card"
-              subtitle=" Let's theme this one too"
+              headline="Premium branding and social assets for your listing"
+              subtitle="Simple, and effective"
               button="Learn more"
             />
           </InfoRow>
           <InfoBanner
-            headline="This is a banner "
-            subtitle=" Let's theme this one too"
-            button="Learn more"
+            headline="Smart ads"
+            subtitle="Bringing social media to life"
+            button="Case studies"
           />
           <InfoRow>
             <InfoCard
-              headline="Build your brand to the moon"
-              subtitle=" No hidden fees, just ease - forever"
+              headline="Custom lead nurturing campaigns"
+              subtitle="From drip funnels to email campaigns, it's on us"
               button="Learn more"
             />
             <InfoCard
-              headline="This is another card"
-              subtitle=" Let's theme this one too"
-              button="Learn more"
+              headline="Detailed analytics on reach and conversion"
+              subtitle="Let your budget do the work, and watch the results"
+              button="Preview"
             />
           </InfoRow>
         </AppBody>
+        <Footer />
       </AppContainer>
     </div>
   );

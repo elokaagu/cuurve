@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Header from "../components/Header";
 import HeroComponent from "../components/HeroComponent";
+import Description from "../components/Description";
+import Footer from "../components/Footer";
 
 function company(props) {
   return (
@@ -11,7 +13,35 @@ function company(props) {
         <Header />
         <AppBody>
           <HeroComponent />
+          <Description
+            title="Who we are"
+            text="We are building tools to empower real estate professionals with
+          everything they need to market their business and listings. Today, we
+          focus on providing marketing solutions and software tools to help our
+          customers in the UK and USA maintain an advantage over the
+          competition. Tomorrow, we will do so all over the world."
+            image="https://a0.muscache.com/im/pictures/4bac6f05-928e-433c-8440-c992a72e9b44.jpg?im_w=1200"
+          />
+          <Description
+            title="Our location"
+            text="We are building tools to empower real estate professionals with
+          everything they need to market their business and listings. Today, we
+          focus on providing marketing solutions and software tools to help our
+          customers in the UK and USA maintain an advantage over the
+          competition. Tomorrow, we will do so all over the world."
+            image="https://a0.muscache.com/im/pictures/4bac6f05-928e-433c-8440-c992a72e9b44.jpg?im_w=1200"
+          />
+          <Description
+            title="Still have questions?"
+            text="We are building tools to empower real estate professionals with
+          everything they need to market their business and listings. Today, we
+          focus on providing marketing solutions and software tools to help our
+          customers in the UK and USA maintain an advantage over the
+          competition. Tomorrow, we will do so all over the world."
+            image="https://a0.muscache.com/im/pictures/4bac6f05-928e-433c-8440-c992a72e9b44.jpg?im_w=1200"
+          />
         </AppBody>
+        <Footer />
       </AppContainer>
     </div>
   );

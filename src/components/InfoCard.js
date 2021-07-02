@@ -35,7 +35,7 @@ const InfoText = styled.div`
   box-sizing: border-box;
   font-weight: 100;
   font-size: 1.0625rem;
-  line-height: 1.411764705882353;
+  line-height: 1.6;
   letter-spacing: -0.025em;
   color: rgb(6, 102, 235);
   position: relative;
@@ -43,9 +43,10 @@ const InfoText = styled.div`
   font-size: 25px;
   margin-top: 50px;
   word-break: break-word;
+  padding-bottom: 10px;
   h1 {
-    font-size: 50px;
-    line-height: 40px;
+    font-size: 40px;
+    line-height: 1.1;
     font-weight: 100;
     letter-spacing: -0.1rem;
     margin-bottom: 20px;
