@@ -12,7 +12,12 @@ function company(props) {
       <AppContainer>
         <Header />
         <AppBody>
-          <HeroComponent />
+          <HeroComponent
+            title="One tool for all things real estate"
+            subtitle="From high quality lead generation and branding, to propsectve client
+          nurturing tools, Cuurve helps real estate agents get more from their
+          money"
+          />
           <Description
             title="Who we are"
             text="We are building tools to empower real estate professionals with

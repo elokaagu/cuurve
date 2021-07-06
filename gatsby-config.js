@@ -11,6 +11,14 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: `ar2ubdnx`,
+        dataset: `production`,
+        graphqlTag: "default",
+      },
+    },
     `gatsby-plugin-styled-components`,
   ],
 };

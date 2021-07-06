@@ -1,18 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-function HeroComponent(props) {
+function HeroComponent({ title, subtitle }) {
   return (
     <HeroContainer>
       <HeroText>
-        <h1>One tool for all things real estate</h1>
+        <h1>{title}</h1>
       </HeroText>
       <HeroSubtext>
-        <p>
-          From high quality lead generation and branding, to propsectve client
-          nurturing tools, Cuurve helps real estate agents get more from their
-          money
-        </p>
+        <p>{subtitle}</p>
       </HeroSubtext>
     </HeroContainer>
   );
