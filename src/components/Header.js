@@ -27,9 +27,11 @@ function Header(props) {
         </HeaderItem>
       </HeaderCenter>
       <HeaderRight>
-        <HeaderButton>
-          <span>Get started</span>
-        </HeaderButton>
+        <StyledLink to="/start">
+          <HeaderButton>
+            <span>Get started</span>
+          </HeaderButton>
+        </StyledLink>
       </HeaderRight>
     </HeaderContainer>
   );

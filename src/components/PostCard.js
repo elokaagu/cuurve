@@ -7,11 +7,13 @@ function PostCard({ title, excerpt, author, slug }) {
   return (
     <PostCardContainer>
       <PostCardImage />
-      <PostCardText>
-        <h2>{title}</h2>
-        <p>{excerpt}</p>
-        <span>{author}</span>
-      </PostCardText>
+      <StyledLink to="/blog/post">
+        <PostCardText>
+          <h2>{title}</h2>
+          <p>{excerpt}</p>
+          <span>{author}</span>
+        </PostCardText>
+      </StyledLink>
     </PostCardContainer>
   );
 }
@@ -42,10 +44,7 @@ const PostCardContainer = styled.div`
 const PostCardImage = styled.img`
   object-fit: contain;
   height: 250px;
-  background-image: url(https://images.unsplash.com/photo-1611605698323-b1e99cfd37ea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2767&q=80);
-
-  background-image: url(${(props) => props.img});
-
+  background-image: url("https://images.unsplash.com/photo-1611605698323-b1e99cfd37ea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2767&q=80");
   background-size: cover;
   background-position: center;
   margin: 0;

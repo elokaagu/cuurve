@@ -60,7 +60,6 @@ export default function blog({ data }) {
                 author="Eloka Agu"
               />
             </PostCardRow>
-            <StyledLink to="/blog/post">Post</StyledLink>
           </BlogContent>
         </AppBody>
       </AppContainer>
