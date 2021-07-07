@@ -16,19 +16,3 @@
   font-family: "Basier Circle Regular";
   src: url("../fonts/BasierCircle-Regular.otf");
 }
-@font-face {
-  font-family: "Maison Neue Book";
-  src: url("../fonts/MaisonNeue-Book.otf");
-}
-@font-face {
-  font-family: "Maison Neue Medium";
-  src: url("../fonts/MaisonNeue-Medium.otf");
-}
-@font-face {
-  font-family: "Maison Neue Demi";
-  src: url("../fonts/MaisonNeue-Demi.otf");
-}
-@font-face {
-  font-family: "Maison Neue Bold";
-  src: url("../fonts/MaisonNeue-Bold.otf");
-}

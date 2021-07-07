@@ -1,5 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import Layout from "../components/Layout";
+import styled from "styled-components";
 
 // styles
 const pageStyles = {
@@ -10,45 +12,42 @@ const pageStyles = {
 const headingStyles = {
   marginTop: 0,
   marginBottom: 64,
-  maxWidth: 320,
 };
 
 const paragraphStyles = {
-  marginBottom: 48,
-};
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
+  marginBottom: 75,
 };
 
 // markup
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <Layout>
+      <AppContainer>
+        <main style={pageStyles}>
+          <title>Not found | Cuurve</title>
+          <h1 style={headingStyles}>Ooopps!</h1>
+          <h2 style={headingStyles}>Page not found</h2>
+          <p style={paragraphStyles}>
+            Sorry we couldn’t find what you were looking for.
+          </p>
+          <RedirectLink to="/">Back to homepage</RedirectLink>
+        </main>
+      </AppContainer>
+    </Layout>
   );
 };
 
 export default NotFoundPage;
+
+const AppContainer = styled.div`
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  text-align: center;
+`;
+
+const RedirectLink = styled(Link)`
+  color: rgb(0, 112, 243);
+  text-decoration: none;
+  font-weight: bold;
+`;

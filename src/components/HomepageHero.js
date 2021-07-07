@@ -16,8 +16,10 @@ function HomepageHero(props) {
         </HeroButton>
       </HeroText>
       <HeroImage
-        src="https://drive.google.com/uc?export=view&id=1PRoLtF4rOTaEMbVnawEOAxe3JsRxK1zV"
-        alt="mockup"
+        // src="https://drive.google.com/uc?export=view&id=1PRoLtF4rOTaEMbVnawEOAxe3JsRxK1zV"
+        src="https://drive.google.com/uc?export=view&id=1qyHYuhc4B3efIPd3B5Hagh6sIeowh44p"
+        // src="https://drive.google.com/uc?export=view&id=1XyOelkvss1nGe7CI6GKuClkR32GA2uiJ"
+        // alt="heroImage"
       />
     </HeroContainer>
   );
@@ -41,6 +43,7 @@ const HeroText = styled.div`
   letter-spacing: -0.025em;
   color: rgba(25, 28, 31, 0.7);
   position: relative;
+  /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
   white-space: pre-wrap;
   font-size: 20px;
   display: flex;
@@ -54,6 +57,7 @@ const HeroText = styled.div`
     padding-bottom: 20px;
     overflow-wrap: break-word;
     color: rgb(25, 28, 31);
+    /* color: white; */
     white-space: pre-wrap;
     word-break: break-word;
   }

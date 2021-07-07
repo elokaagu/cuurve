@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "../styles/Button";
 import { Link } from "gatsby";
 
 function PostCard({ title, excerpt, author, slug }) {

@@ -4,14 +4,6 @@ import styled from "styled-components";
 import Header from "../components/Header";
 import PostCard from "../components/PostCard";
 import HeroComponent from "../components/HeroComponent";
-import { Link } from "gatsby";
-
-// let posts = data.allSanityPost.nodes.map((post) => {
-//   return {
-//     slug: post.slug.current,
-//   };
-// });
-// console.log(rawPosts);
 
 export default function blog({ data }) {
   console.log(data);
@@ -126,14 +118,4 @@ const PostCardRow = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-`;
-
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: rgb(25, 28, 31);
-
-  &:hover {
-    text-decoration: none;
-    color: black;
-  }
 `;

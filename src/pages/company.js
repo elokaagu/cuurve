@@ -1,53 +1,52 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "../components/Header";
 import HeroComponent from "../components/HeroComponent";
 import Description from "../components/Description";
-import Footer from "../components/Footer";
+import Layout from "../components/Layout";
 
 function company(props) {
   return (
     <div>
       <title>Company | Cuurve</title>
-      <AppContainer>
-        <Header />
-        <AppBody>
-          <HeroComponent
-            title="One tool for all things real estate"
-            subtitle="From high quality lead generation and branding, to propsectve client
+      <Layout>
+        <AppContainer>
+          <AppBody>
+            <HeroComponent
+              title="One tool for all things real estate"
+              subtitle="From high quality lead generation and branding, to propsectve client
           nurturing tools, Cuurve helps real estate agents get more from their
           money"
-          />
-          <Description
-            title="Who we are"
-            text="We are building tools to empower real estate professionals with
+            />
+            <Description
+              title="Who we are"
+              text="We are building tools to empower real estate professionals with
           everything they need to market their business and listings. Today, we
           focus on providing marketing solutions and software tools to help our
           customers in the UK and USA maintain an advantage over the
           competition. Tomorrow, we will do so all over the world."
-            image="https://a0.muscache.com/im/pictures/4bac6f05-928e-433c-8440-c992a72e9b44.jpg?im_w=1200"
-          />
-          <Description
-            title="Our location"
-            text="We are building tools to empower real estate professionals with
+              image="https://a0.muscache.com/im/pictures/4bac6f05-928e-433c-8440-c992a72e9b44.jpg?im_w=1200"
+            />
+            <Description
+              title="Our location"
+              text="We are building tools to empower real estate professionals with
           everything they need to market their business and listings. Today, we
           focus on providing marketing solutions and software tools to help our
           customers in the UK and USA maintain an advantage over the
           competition. Tomorrow, we will do so all over the world."
-            image="https://a0.muscache.com/im/pictures/4bac6f05-928e-433c-8440-c992a72e9b44.jpg?im_w=1200"
-          />
-          <Description
-            title="Still have questions?"
-            text="We are building tools to empower real estate professionals with
+              image="https://a0.muscache.com/im/pictures/4bac6f05-928e-433c-8440-c992a72e9b44.jpg?im_w=1200"
+            />
+            <Description
+              title="Still have questions?"
+              text="We are building tools to empower real estate professionals with
           everything they need to market their business and listings. Today, we
           focus on providing marketing solutions and software tools to help our
           customers in the UK and USA maintain an advantage over the
           competition. Tomorrow, we will do so all over the world."
-            image="https://a0.muscache.com/im/pictures/4bac6f05-928e-433c-8440-c992a72e9b44.jpg?im_w=1200"
-          />
-        </AppBody>
-        <Footer />
-      </AppContainer>
+              image="https://a0.muscache.com/im/pictures/4bac6f05-928e-433c-8440-c992a72e9b44.jpg?im_w=1200"
+            />
+          </AppBody>
+        </AppContainer>
+      </Layout>
     </div>
   );
 }

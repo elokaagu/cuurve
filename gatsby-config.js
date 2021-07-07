@@ -4,6 +4,13 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+        name: "images",
+      },
+    },
+    {
       resolve: `gatsby-plugin-material-ui`,
       options: {
         stylesProvider: {
@@ -19,6 +26,9 @@ module.exports = {
         graphqlTag: "default",
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
   ],
 };

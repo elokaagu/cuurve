@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import HeaderOption from "./HeaderOption";
 import { Link } from "gatsby";
 
 function Header(props) {
@@ -83,11 +82,11 @@ const HeaderLeft = styled.div`
   align-items: center;
 `;
 
-const Logo = styled.img`
-  object-fit: contain;
-  height: 20px;
-  cursor: pointer;
-`;
+// const Logo = styled.img`
+//   object-fit: contain;
+//   height: 20px;
+//   cursor: pointer;
+// `;
 
 const HeaderCenter = styled.div`
   display: flex;

@@ -1,49 +1,48 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "../components/Header";
 import InfoBanner from "../components/InfoBanner";
 import InfoCard from "../components/InfoCard";
-import Footer from "../components/Footer";
+import Layout from "../components/Layout";
 
 function product(props) {
   return (
     <div>
       <title>Product | Cuurve</title>
-      <AppContainer>
-        <Header />
-        <AppBody>
-          <InfoRow>
-            <InfoCard
-              headline="High quality leads delivered straight to your phone"
-              subtitle="No hassle, just ease"
-              button="Learn more"
+      <Layout>
+        <AppContainer>
+          <AppBody>
+            <InfoRow>
+              <InfoCard
+                headline="High quality leads delivered straight to your phone"
+                subtitle="No hassle, just ease"
+                button="Learn more"
+              />
+              <InfoCard
+                headline="Premium branding and social assets for your listing"
+                subtitle="Simple, and effective"
+                button="Learn more"
+              />
+            </InfoRow>
+            <InfoBanner
+              headline="Smart ads"
+              subtitle="Bringing social media to life"
+              button="Case studies"
             />
-            <InfoCard
-              headline="Premium branding and social assets for your listing"
-              subtitle="Simple, and effective"
-              button="Learn more"
-            />
-          </InfoRow>
-          <InfoBanner
-            headline="Smart ads"
-            subtitle="Bringing social media to life"
-            button="Case studies"
-          />
-          <InfoRow>
-            <InfoCard
-              headline="Custom lead nurturing campaigns"
-              subtitle="From drip funnels to email campaigns, it's on us"
-              button="Learn more"
-            />
-            <InfoCard
-              headline="Detailed analytics on reach and conversion"
-              subtitle="Let your budget do the work, and watch the results"
-              button="Preview"
-            />
-          </InfoRow>
-        </AppBody>
-        <Footer />
-      </AppContainer>
+            <InfoRow>
+              <InfoCard
+                headline="Custom lead nurturing campaigns"
+                subtitle="From drip funnels to email campaigns, it's on us"
+                button="Learn more"
+              />
+              <InfoCard
+                headline="Detailed analytics on reach and conversion"
+                subtitle="Let your budget do the work, and watch the results"
+                button="Preview"
+              />
+            </InfoRow>
+          </AppBody>
+        </AppContainer>
+      </Layout>
     </div>
   );
 }

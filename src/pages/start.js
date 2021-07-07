@@ -1,40 +1,56 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import { InlineWidget } from "react-calendly";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import { IconButton } from "@material-ui/core";
 
 function start(props) {
   return (
-    <AppContainer>
-      <AppBody>
-        <StartContainer>
-          <StartLeft>
-            <StartText>
-              <h1>This is the start of something special</h1>
+    <>
+      <title>Get Started | Cuurve</title>
+      <AppContainer>
+        <AppBody>
+          <StartContainer>
+            <IconButton>
               <StyledLink to="/">
-                <p>Sign up here</p>
+                <ChevronLeftIcon />
               </StyledLink>
+            </IconButton>
+            <StartText>
+              <p>Get started</p>
+              <h1>This is the start of something special</h1>
+              <span>
+                By the end of this Audit call, you will have a clear
+                understanding of the next steps you can take for your business
+                to start generating consistent and reliable results online with
+                Funnels & Paid Advertising. Find a time on Dany’s calendar to
+                schedule your call today and we look forward to speaking to you
+                soon!
+              </span>
             </StartText>
-            <StartForm>
-              <Input type="text" placeholder="First Name" />
-              <Input type="text" placeholder="Last Name" />
-              <Input type="text" placeholder="Email" />
-            </StartForm>
-          </StartLeft>
-          <StartRight>
             <CalendlyForm>
-              <h1>Calendly Integration</h1>
+              <InlineWidget
+                url="https://calendly.com/cuurve"
+                styles={{
+                  width: "400px",
+                  height: "600px",
+                  borderRadius: 20,
+                }}
+              />
             </CalendlyForm>
-          </StartRight>
-        </StartContainer>
-      </AppBody>
-    </AppContainer>
+          </StartContainer>
+        </AppBody>
+      </AppContainer>
+    </>
   );
 }
 
 export default start;
 
 const AppContainer = styled.div`
-  display: grid;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   height: 100vh;
   background-image: linear-gradient(
@@ -48,14 +64,13 @@ const AppContainer = styled.div`
 const AppBody = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 35px;
+  align-items: left;
+  margin-top: auto;
+  margin-bottom: auto;
   max-width: 1200px;
   margin-left: 20px;
   margin-right: 20px;
-
-  h1 {
-    width: 80%;
-  }
+  position: relative;
 `;
 
 const StartContainer = styled.div`
@@ -65,12 +80,21 @@ const StartContainer = styled.div`
   font-size: 16px;
   margin-top: 50px;
   padding: 20px;
-  justify-content: space-between;
   width: 100%;
+
+  .MuiIconButton-root {
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    align-items: left;
+  }
 `;
 
 const StartText = styled.div`
   padding: 20px;
+  width: 40%;
+
   h1 {
     font-size: 30px;
     cursor: pointer;
@@ -89,37 +113,22 @@ const StartText = styled.div`
     padding-bottom: 50px;
     cursor: pointer;
   }
-`;
-
-const StartForm = styled.form`
-  display: flex;
-  align-items: left;
-  flex-direction: column;
-`;
-
-const Input = styled.input`
-  margin: 20px;
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  width: 450px;
-  border: none;
-  outline: none;
+  span {
+    font-size: 20px;
+    font-family: "Basier Circle Regular";
+    color: white;
+    padding-bottom: 50px;
+    line-height: 1.3;
+    cursor: pointer;
+  }
 `;
 
 const CalendlyForm = styled.div`
   color: white;
-`;
-
-const StartLeft = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const StartRight = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  padding: 20px;
+  h1 {
+    padding-bottom: 20px;
+  }
 `;
 
 const StyledLink = styled(Link)`
