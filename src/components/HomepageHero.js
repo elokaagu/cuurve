@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 
 function HomepageHero(props) {
   return (
@@ -11,15 +12,15 @@ function HomepageHero(props) {
         </h1>
         Curate high quality leads for your properties, and make your money go
         further with next generation targeting and retargeting technologies{" "}
-        <HeroButton>
-          <span>Get started</span>
-        </HeroButton>
+        <StyledLink to="/start">
+          <HeroButton>
+            <span>Get started</span>
+          </HeroButton>
+        </StyledLink>
       </HeroText>
       <HeroImage
-        // src="https://drive.google.com/uc?export=view&id=1PRoLtF4rOTaEMbVnawEOAxe3JsRxK1zV"
-        src="https://drive.google.com/uc?export=view&id=1qyHYuhc4B3efIPd3B5Hagh6sIeowh44p"
-        // src="https://drive.google.com/uc?export=view&id=1XyOelkvss1nGe7CI6GKuClkR32GA2uiJ"
-        // alt="heroImage"
+        src="https://storage.googleapis.com/cuurveimages/launchpad.png"
+        alt="heroImage"
       />
     </HeroContainer>
   );
@@ -44,22 +45,31 @@ const HeroText = styled.div`
   color: rgba(25, 28, 31, 0.7);
   position: relative;
   /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-  white-space: pre-wrap;
   font-size: 20px;
   display: flex;
   flex-direction: column;
-  word-break: break-word;
+
   h1 {
     font-size: 96px;
     line-height: 104px;
     font-weight: 100;
     letter-spacing: -0.4rem;
     padding-bottom: 20px;
-    overflow-wrap: break-word;
-    color: rgb(25, 28, 31);
+    /* color: rgb(25, 28, 31); */
     /* color: white; */
-    white-space: pre-wrap;
-    word-break: break-word;
+    -webkit-background-clip: text;
+    -webkit-box-orient: vertical;
+    -webkit-font-smoothing: antialiased;
+    -webkit-line-clamp: 6;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    background-attachment: scroll;
+    background-clip: text;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(
+      90deg,
+      rgb(111, 1, 156) 0%,
+      rgb(198, 1, 126) 135.12%
+    );
   }
 `;
 
@@ -81,5 +91,15 @@ const HeroButton = styled.button`
   span {
     font-family: "Basier Circle Medium";
     font-size: 18px;
+  }
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: rgb(25, 28, 31);
+
+  &:hover {
+    text-decoration: none;
+    color: black;
   }
 `;

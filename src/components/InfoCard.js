@@ -1,16 +1,34 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 
-function InfoCard({ headline, subtitle, button }) {
+function InfoCard({
+  headline,
+  subtitle,
+  button,
+  backgroundImage,
+  backgroundColor,
+  backgroundPosition,
+}) {
   return (
-    <InfoContainer>
+    <InfoContainer
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "bottom",
+        backgroundColor: `${backgroundColor}`,
+      }}
+    >
       <InfoText>
         <h1>{headline}</h1>
         {subtitle}
       </InfoText>
-      <InfoButton>
-        <span>{button}</span>
-      </InfoButton>
+      <StyledLink to="/start">
+        <InfoButton>
+          <span>{button}</span>
+        </InfoButton>
+      </StyledLink>
     </InfoContainer>
   );
 }
@@ -77,5 +95,15 @@ const InfoButton = styled.button`
   }
   :hover {
     opacity: 80%;
+  }
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: rgb(25, 28, 31);
+
+  &:hover {
+    text-decoration: none;
+    color: black;
   }
 `;

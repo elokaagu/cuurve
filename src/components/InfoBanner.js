@@ -1,17 +1,37 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 
-function InfoBanner({ headline, subtitle, text, button }) {
+function InfoBanner({
+  headline,
+  subtitle,
+  text,
+  button,
+  backgroundImage,
+  backgroundColor,
+  backgroundPosition,
+}) {
   return (
-    <InfoContainer>
+    <InfoContainer
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "bottom",
+        backgroundColor: `${backgroundColor}`,
+      }}
+    >
       <InfoText>
         <h1>{headline}</h1>
         {subtitle}
         <p>{text}</p>
       </InfoText>
-      <InfoButton>
-        <span>{button}</span>
-      </InfoButton>
+
+      <StyledLink to="/start">
+        <InfoButton>
+          <span>{button}</span>
+        </InfoButton>
+      </StyledLink>
     </InfoContainer>
   );
 }
@@ -26,6 +46,7 @@ const InfoContainer = styled.div`
   padding: 30px;
   height: 350px;
   background-color: rgb(25, 28, 31);
+
   border-radius: 30px;
   cursor: pointer;
 `;
@@ -84,5 +105,15 @@ const InfoButton = styled.button`
   }
   :hover {
     opacity: 80%;
+  }
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: rgb(25, 28, 31);
+
+  &:hover {
+    text-decoration: none;
+    color: black;
   }
 `;

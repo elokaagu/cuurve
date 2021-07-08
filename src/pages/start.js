@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "gatsby";
-import { InlineWidget } from "react-calendly";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import { IconButton } from "@material-ui/core";
+import Modal from "../components/Modal";
 
 function start(props) {
   return (
@@ -12,33 +9,7 @@ function start(props) {
       <AppContainer>
         <AppBody>
           <StartContainer>
-            <IconButton>
-              <StyledLink to="/">
-                <ChevronLeftIcon />
-              </StyledLink>
-            </IconButton>
-            <StartText>
-              <p>Get started</p>
-              <h1>This is the start of something special</h1>
-              <span>
-                By the end of this Audit call, you will have a clear
-                understanding of the next steps you can take for your business
-                to start generating consistent and reliable results online with
-                Funnels & Paid Advertising. Find a time on Dany’s calendar to
-                schedule your call today and we look forward to speaking to you
-                soon!
-              </span>
-            </StartText>
-            <CalendlyForm>
-              <InlineWidget
-                url="https://calendly.com/cuurve"
-                styles={{
-                  width: "400px",
-                  height: "600px",
-                  borderRadius: 20,
-                }}
-              />
-            </CalendlyForm>
+            <Modal />
           </StartContainer>
         </AppBody>
       </AppContainer>
@@ -53,12 +24,30 @@ const AppContainer = styled.div`
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  background-image: linear-gradient(
-    90deg,
-    rgb(11, 4, 17),
-    rgb(11, 4, 17) 50%,
-    rgb(17, 17, 24) 0px
-  );
+  background-attachment: scroll, scroll, scroll, scroll;
+  background-clip: border-box, border-box, border-box, border-box;
+  background-color: rgb(247, 250, 252);
+  background-image: radial-gradient(
+      92.81% 48.44% at -24.53% -16.02%,
+      rgb(148, 60, 255) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    radial-gradient(
+      75.78% 68.16% at 56.74% -24.02%,
+      rgb(253, 157, 82) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    radial-gradient(
+      160.86% 46.39% at 177.14% -15.62%,
+      rgb(221, 69, 211) 9.06%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    none;
+  background-origin: padding-box, padding-box, padding-box, padding-box;
+  background-position-x: 0%, 0%, 0%, 0%;
+  background-position-y: 0%, 0%, 0%, 0%;
+  background-size: auto, auto, auto, auto;
+  bottom: 0px;
 `;
 
 const AppBody = styled.div`
@@ -81,56 +70,4 @@ const StartContainer = styled.div`
   margin-top: 50px;
   padding: 20px;
   width: 100%;
-
-  .MuiIconButton-root {
-    color: white;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    align-items: left;
-  }
-`;
-
-const StartText = styled.div`
-  padding: 20px;
-  width: 40%;
-
-  h1 {
-    font-size: 30px;
-    cursor: pointer;
-    width: 500px;
-    font-weight: 500;
-    line-height: 1.217;
-    color: #fff;
-    padding-bottom: 20px;
-    cursor: pointer;
-  }
-
-  p {
-    font-size: 30px;
-    font-family: "Basier Circle Medium";
-    color: rgb(0, 112, 243);
-    padding-bottom: 50px;
-    cursor: pointer;
-  }
-  span {
-    font-size: 20px;
-    font-family: "Basier Circle Regular";
-    color: white;
-    padding-bottom: 50px;
-    line-height: 1.3;
-    cursor: pointer;
-  }
-`;
-
-const CalendlyForm = styled.div`
-  color: white;
-  padding: 20px;
-  h1 {
-    padding-bottom: 20px;
-  }
-`;
-
-const StyledLink = styled(Link)`
-  text-decoration: none;
 `;

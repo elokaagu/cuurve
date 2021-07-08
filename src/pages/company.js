@@ -28,20 +28,12 @@ function company(props) {
             />
             <Description
               title="Our location"
-              text="We are building tools to empower real estate professionals with
-          everything they need to market their business and listings. Today, we
-          focus on providing marketing solutions and software tools to help our
-          customers in the UK and USA maintain an advantage over the
-          competition. Tomorrow, we will do so all over the world."
+              text="We are based all around the world and specialise in connecting quality listings with hyper local audiences. In doing so we simplify the process of discovering properties in a way that is super simple and fun. Take advantage of this new opportunity and gain worldwide exposure for your high quality listings."
               image="https://a0.muscache.com/im/pictures/4bac6f05-928e-433c-8440-c992a72e9b44.jpg?im_w=1200"
             />
             <Description
               title="Still have questions?"
-              text="We are building tools to empower real estate professionals with
-          everything they need to market their business and listings. Today, we
-          focus on providing marketing solutions and software tools to help our
-          customers in the UK and USA maintain an advantage over the
-          competition. Tomorrow, we will do so all over the world."
+              text="Get in touch with our team if you have any questions about how Cuurve works, our product line and pricing plans. Simply fill out the Getting Started form and you'll be taken to a call with one of our customer service representatives, who will  help you start your journey."
               image="https://a0.muscache.com/im/pictures/4bac6f05-928e-433c-8440-c992a72e9b44.jpg?im_w=1200"
             />
           </AppBody>
