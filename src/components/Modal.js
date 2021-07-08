@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import { InlineWidget } from "react-calendly";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import { IconButton } from "@material-ui/core";
+import { CloseRounded } from "@material-ui/icons";
+import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 
 function Modal(props) {
   return (
@@ -11,19 +12,36 @@ function Modal(props) {
       <ModalLeft>
         <IconButton>
           <StyledLink to="/">
-            <ChevronLeftIcon />
+            <CloseRounded />
           </StyledLink>
         </IconButton>
         <StartText>
-          <p>Get started</p>
-          <h1>This is the start of something special</h1>
-          <span>
-            By the end of this Audit call, you will have a clear understanding
-            of the next steps you can take for your business to start generating
-            consistent and reliable results online with Funnels & Paid
-            Advertising. Find a time on Dany’s calendar to schedule your call
-            today and we look forward to speaking to you soon!
-          </span>
+          <h1>Get Started</h1>
+          {/* <h2>This is the start of something special</h2> */}
+          <h2>Schedule a call with us</h2>
+          <TextBlock>
+            <CheckCircleIcon />
+            <p>
+              By the end of this strategy call, you will have a clear
+              understanding of the next steps you can take for your business to
+              start generating consistent and reliable results online with the
+              right branding and advertising solutions.
+            </p>
+          </TextBlock>
+          <TextBlock>
+            <CheckCircleIcon />
+            <p>
+              This is a call to see where you are at and if we can help you
+              achieve your goals.
+            </p>
+          </TextBlock>
+          <TextBlock>
+            <CheckCircleIcon />
+            <p>
+              Find a time on our calendar to schedule your call today. We look
+              forward to speaking to you soon.
+            </p>
+          </TextBlock>
         </StartText>
       </ModalLeft>
       <ModalRight>
@@ -69,29 +87,39 @@ const ModalLeft = styled.div`
 `;
 
 const StartText = styled.div`
-  h1 {
-    font-size: 30px;
-    cursor: pointer;
-    font-weight: 500;
-    line-height: 1.3;
-    color: black;
-    padding-bottom: 20px;
-    cursor: pointer;
-  }
+  display: flex;
+  flex-direction: column;
 
-  p {
+  .MuiSvgIcon-root {
+    cursor: pointer;
+    padding-right: 20px;
+  }
+  h1 {
     font-size: 50px;
     font-family: "Basier Circle Medium";
     color: rgb(0, 112, 243);
     padding-bottom: 50px;
     cursor: pointer;
   }
-  span {
-    font-size: 20px;
-    font-family: "Basier Circle Regular";
-    color: black;
-    line-height: 1.3;
+
+  h2 {
+    font-size: 25px;
     cursor: pointer;
+    font-weight: 500;
+    line-height: 1.3;
+    color: rgb(25, 28, 31);
+    padding-bottom: 50px;
+    cursor: pointer;
+  }
+
+  p {
+    font-family: Roboto, -apple-system, "Helvetica Neue", Helvetica, "Segoe UI",
+      Arial, sans-serif;
+    color: rgb(139, 149, 158);
+    line-height: 1.4;
+    font-size: 18px;
+    padding-bottom: 35px;
+    letter-spacing: 0;
   }
 `;
 
@@ -105,4 +133,9 @@ const CalendlyForm = styled.div``;
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: rgb(25, 28, 31);
+`;
+
+const TextBlock = styled.div`
+  display: flex;
+  align-items: top;
 `;
