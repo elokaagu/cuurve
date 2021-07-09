@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Modal from "../components/Modal";
+import { device } from "../styles/breakpoints";
 
 function start(props) {
   return (
@@ -48,6 +49,10 @@ const AppContainer = styled.div`
   background-position-y: 0%, 0%, 0%, 0%;
   background-size: auto, auto, auto, auto;
   bottom: 0px;
+
+  @media ${device.laptop} {
+    height: 100%;
+  }
 `;
 
 const AppBody = styled.div`

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Header from "../components/Header";
 import PostCard from "../components/PostCard";
 import HeroComponent from "../components/HeroComponent";
+import { device } from "../styles/breakpoints";
 
 export default function blog({ data }) {
   console.log(data);
@@ -112,10 +113,34 @@ const BlogContent = styled.div`
   align-items: center;
   flex-direction: column;
   padding-bottom: 100px;
+
+  @media ${device.laptop} {
+    flex-direction: row;
+  }
+
+  @media ${device.tablet} {
+    flex-direction: row;
+  }
+
+  @media ${device.mobile} {
+    flex-direction: column;
+  }
 `;
 
 const PostCardRow = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+
+  @media ${device.laptop} {
+    flex-direction: column;
+  }
+
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
+
+  @media ${device.mobile} {
+    flex-direction: column;
+  }
 `;

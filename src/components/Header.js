@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import { device } from "../styles/breakpoints";
+import Menu from "@material-ui/icons/Menu";
+import { IconButton } from "@material-ui/core";
 
 function Header(props) {
   return (
@@ -31,6 +34,9 @@ function Header(props) {
             <span>Get started</span>
           </HeaderButton>
         </StyledLink>
+        <IconButton>
+          <Menu />
+        </IconButton>
       </HeaderRight>
     </HeaderContainer>
   );
@@ -55,6 +61,10 @@ const HeaderContainer = styled.div`
   /* color: #fff; */
   color: rgb(25, 28, 31);
   font-style: normal;
+
+  @media ${device.mobile} {
+    justify-content: space-between;
+  }
 
   /* Normal Theming */
 
@@ -91,11 +101,25 @@ const HeaderLeft = styled.div`
 const HeaderCenter = styled.div`
   display: flex;
   align-items: center;
+
+  @media ${device.mobile} {
+    display: none;
+  }
 `;
 
 const HeaderRight = styled.div`
   display: flex;
   align-items: center;
+
+  .MuiSvgIcon-root {
+    display: none;
+  }
+
+  @media ${device.mobile} {
+    .MuiSvgIcon-root {
+      display: flex;
+    }
+  }
 `;
 
 const HeaderItem = styled.div`
@@ -136,5 +160,9 @@ const HeaderButton = styled.button`
   span {
     font-family: "Basier Circle Medium";
     font-size: 17px;
+  }
+
+  @media ${device.mobile} {
+    display: none;
   }
 `;

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import { device } from "../styles/breakpoints";
 
 function InfoCard({
   headline,
@@ -22,7 +23,7 @@ function InfoCard({
     >
       <InfoText>
         <h1>{headline}</h1>
-        {subtitle}
+        <span>{subtitle}</span>
       </InfoText>
       <StyledLink to="/start">
         <InfoButton>
@@ -46,6 +47,10 @@ const InfoContainer = styled.div`
   background-color: rgb(25, 28, 31);
   border-radius: 30px;
   cursor: pointer;
+
+  @media ${device.mobile} {
+    height: 300px;
+  }
 `;
 
 const InfoText = styled.div`
@@ -62,6 +67,11 @@ const InfoText = styled.div`
   margin-top: 50px;
   word-break: break-word;
   padding-bottom: 10px;
+
+  @media ${device.mobile} {
+    line-height: 1.1;
+  }
+
   h1 {
     font-size: 40px;
     line-height: 1.1;
@@ -74,6 +84,16 @@ const InfoText = styled.div`
     color: #fff;
     white-space: pre-wrap;
     word-break: break-word;
+
+    @media ${device.mobile} {
+      font-size: 30px;
+    }
+  }
+
+  span {
+    @media ${device.mobile} {
+      font-size: 18px;
+    }
   }
 `;
 

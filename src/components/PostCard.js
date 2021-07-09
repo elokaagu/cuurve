@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import { device } from "../styles/breakpoints";
 
 function PostCard({ title, excerpt, author, slug }) {
   return (
@@ -37,6 +38,18 @@ const PostCardContainer = styled.div`
 
   :hover {
     transform: scale(1.05);
+  }
+
+  @media ${device.laptop} {
+    width: 450px;
+  }
+
+  @media ${device.tablet} {
+    width: 325px;
+  }
+
+  @media ${device.mobile} {
+    width: 325px;
   }
 `;
 

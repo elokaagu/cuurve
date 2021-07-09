@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import { device } from "../styles/breakpoints";
 
 function InfoBanner({
   headline,
@@ -10,6 +11,7 @@ function InfoBanner({
   backgroundImage,
   backgroundColor,
   backgroundPosition,
+  color,
 }) {
   return (
     <InfoContainer
@@ -17,7 +19,7 @@ function InfoBanner({
         backgroundImage: `url(${backgroundImage})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        backgroundPosition: "bottom",
+        backgroundPosition: `${backgroundPosition}`,
         backgroundColor: `${backgroundColor}`,
       }}
     >
@@ -26,7 +28,6 @@ function InfoBanner({
         {subtitle}
         <p>{text}</p>
       </InfoText>
-
       <StyledLink to="/start">
         <InfoButton>
           <span>{button}</span>
@@ -49,6 +50,10 @@ const InfoContainer = styled.div`
 
   border-radius: 30px;
   cursor: pointer;
+
+  @media ${device.mobile} {
+    height: 300px;
+  }
 `;
 
 const InfoText = styled.div`
@@ -64,6 +69,11 @@ const InfoText = styled.div`
   font-size: 25px;
   margin-top: 50px;
   word-break: break-word;
+
+  @media ${device.mobile} {
+    font-size: 18px;
+  }
+
   h1 {
     font-size: 50px;
     line-height: 40px;
@@ -76,6 +86,10 @@ const InfoText = styled.div`
     color: #fff;
     white-space: pre-wrap;
     word-break: break-word;
+
+    @media ${device.mobile} {
+      font-size: 30px;
+    }
   }
   p {
     color: white;
@@ -84,6 +98,10 @@ const InfoText = styled.div`
     font-size: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+
+    @media ${device.mobile} {
+      display: none;
+    }
   }
 `;
 

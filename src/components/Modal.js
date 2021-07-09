@@ -5,6 +5,7 @@ import { InlineWidget } from "react-calendly";
 import { IconButton } from "@material-ui/core";
 import { CloseRounded } from "@material-ui/icons";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import { device } from "../styles/breakpoints";
 
 function Modal(props) {
   return (
@@ -49,7 +50,8 @@ function Modal(props) {
           <InlineWidget
             url="https://calendly.com/cuurve"
             styles={{
-              width: "550px",
+              // width: "550px",
+              minWidth: "210px",
               height: "600px",
               borderRadius: 20,
             }}
@@ -78,6 +80,20 @@ const ModalContainer = styled.div`
     right: 0;
     margin: 20px;
   }
+
+  @media ${device.laptop} {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin-bottom: 100px;
+  }
+
+  @media ${device.mobile} {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin-bottom: 100px;
+  }
 `;
 
 const ModalLeft = styled.div`
@@ -100,6 +116,10 @@ const StartText = styled.div`
     color: rgb(0, 112, 243);
     padding-bottom: 50px;
     cursor: pointer;
+
+    @media ${device.mobile} {
+      font-size: 30px;
+    }
   }
 
   h2 {
@@ -110,6 +130,10 @@ const StartText = styled.div`
     color: rgb(25, 28, 31);
     padding-bottom: 50px;
     cursor: pointer;
+
+    @media ${device.mobile} {
+      font-size: 18px;
+    }
   }
 
   p {
@@ -120,6 +144,14 @@ const StartText = styled.div`
     font-size: 18px;
     padding-bottom: 35px;
     letter-spacing: 0;
+
+    @media ${device.laptop} {
+      width: 80%;
+    }
+
+    @media ${device.mobile} {
+      font-size: 15px;
+    }
   }
 `;
 
@@ -128,7 +160,13 @@ const ModalRight = styled.div`
   padding: 20px;
 `;
 
-const CalendlyForm = styled.div``;
+const CalendlyForm = styled.div`
+  @media ${device.mobile} {
+    InlineWidget {
+      width: 150px;
+    }
+  }
+`;
 
 const StyledLink = styled(Link)`
   text-decoration: none;

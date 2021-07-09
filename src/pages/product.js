@@ -3,6 +3,7 @@ import styled from "styled-components";
 import InfoBanner from "../components/InfoBanner";
 import InfoCard from "../components/InfoCard";
 import Layout from "../components/Layout";
+import { device } from "../styles/breakpoints";
 
 function product(props) {
   return (
@@ -35,7 +36,7 @@ function product(props) {
                 button="Learn more"
               />
               <InfoCard
-                headline="Detailed analytics on reach and conversion"
+                headline="Detailed stats on reach and conversion"
                 subtitle="Let your budget do the work, and watch the results"
                 button="Preview"
               />
@@ -62,6 +63,10 @@ const AppContainer = styled.div`
   background-size: cover;
   width: 100%;
   border-bottom: none;
+
+  @media ${device.mobile} {
+    padding: 2rem 0px;
+  }
 `;
 
 const AppBody = styled.div`
@@ -76,4 +81,9 @@ const AppBody = styled.div`
 const InfoRow = styled.div`
   display: flex;
   align-items: center;
+
+  @media ${device.mobile} {
+    display: flex;
+    flex-direction: column;
+  }
 `;

@@ -19,6 +19,7 @@ function index(props) {
               text="We use business information to create tailored premium marketing content, including social assets and automated posting."
               button="Try Cuurve"
               backgroundImage="https://storage.googleapis.com/cuurveimages/Transfers.jpg"
+              backgroundPosition="bottom"
             />
             <InfoBanner
               headline="Stand out from the noise"
@@ -32,6 +33,8 @@ function index(props) {
               subtitle="With custom drip funnels and email campaigns"
               text="Share quality content to create business opportunities and establish lasting relationships with prospective buyers and sellers."
               button="Talk to us"
+              backgroundColor="rgb(25, 28, 31)"
+              backgroundPosition="bottom"
             />
           </AppBody>
         </AppContainer>

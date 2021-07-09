@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../styles/breakpoints";
 
 function HeroComponent({ title, subtitle }) {
   return (
@@ -37,6 +38,7 @@ const HeroText = styled.div`
   flex-direction: column;
   word-break: break-word;
   padding-bottom: 20px;
+
   h1 {
     font-size: 80px;
     font-weight: 100;
@@ -49,6 +51,18 @@ const HeroText = styled.div`
     margin: 0 auto;
     width: 50%;
     padding: 20px;
+
+    @media ${device.tablet} {
+      font-size: 60px;
+      letter-spacing: -0.03em;
+    }
+
+    @media ${device.mobile} {
+      font-size: 50px;
+      letter-spacing: -0.03em;
+      line-height: 50px;
+      padding-bottom: 30px;
+    }
   }
 `;
 

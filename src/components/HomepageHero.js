@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import { device } from "../styles/breakpoints";
 
 function HomepageHero(props) {
   return (
     <HeroContainer>
       <HeroText>
-        <h1>
-          One solution, <br />
-          all things real estate
-        </h1>
-        Curate high quality leads for your properties, and make your money go
-        further with next generation targeting and retargeting technologies{" "}
+        <h1>One solution, all things real estate</h1>
+        <span>
+          Curate high quality leads for your properties, and make your money go
+          further with next generation targeting and retargeting technologies{" "}
+        </span>
         <StyledLink to="/start">
           <HeroButton>
             <span>Get started</span>
@@ -33,6 +33,18 @@ const HeroContainer = styled.div`
   display: flex;
   align-items: center;
   text-align: left;
+
+  @media ${device.laptop} {
+    height: 1200px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @media ${device.mobile} {
+    width: 350px;
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 const HeroText = styled.div`
@@ -48,6 +60,10 @@ const HeroText = styled.div`
   font-size: 20px;
   display: flex;
   flex-direction: column;
+
+  @media ${device.laptop} {
+    padding: 50px;
+  }
 
   h1 {
     font-size: 96px;
@@ -70,12 +86,50 @@ const HeroText = styled.div`
       rgb(111, 1, 156) 0%,
       rgb(198, 1, 126) 135.12%
     );
+
+    @media ${device.laptop} {
+      font-size: 100px;
+      text-align: center;
+      padding-bottom: 100px;
+    }
+
+    @media ${device.mobile} {
+      font-size: 50px;
+      letter-spacing: -0.03em;
+      line-height: 50px;
+      padding-bottom: 30px;
+    }
+  }
+
+  @media ${device.laptop} {
+    font-size: 25px;
+    padding-bottom: 100px;
+  }
+
+  @media ${device.mobile} {
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    padding: 20px;
+  }
+
+  span {
+    @media ${device.laptop} {
+      font-size: 25px;
+      padding-bottom: 100px;
+      text-align: center;
+      padding-right: 50px;
+      padding-left: 50px;
+    }
   }
 `;
 
 const HeroImage = styled.img`
   object-fit: contain;
   width: 600px;
+
+  @media ${device.mobile} {
+    width: 350px;
+  }
 `;
 
 const HeroButton = styled.button`
@@ -91,6 +145,14 @@ const HeroButton = styled.button`
   span {
     font-family: "Basier Circle Medium";
     font-size: 18px;
+  }
+
+  @media ${device.laptop} {
+    width: 50%;
+  }
+
+  @media ${device.mobile} {
+    width: 50%;
   }
 `;
 
