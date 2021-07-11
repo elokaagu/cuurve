@@ -21,36 +21,9 @@ export default function blog({ data }) {
           <BlogContent>
             <PostCardRow>
               <PostCard
-                title="How to do well in real estate, using Cuurve as the aim"
-                excerpt="This is an excerpt of the article"
-                author="Eloka"
-              />
-              <PostCard
-                title="This is the first title"
-                excerpt="This is an excerpt of the article"
+                title="Is Tik Tok the future of real estate?"
+                excerpt="We live in a world that is constantly changing, with newer media channels emerging as the key value drivers across the ecosystem."
                 author="Cuurve Team"
-              />
-              <PostCard
-                title="Back to the future: Crypto and the Economy"
-                excerpt="The crypto economy is still in its early stages of growth. From the days of Satoshi Nakamoto through to the bull run of 2020, it's a space that continues to heat up."
-                author="Eloka Agu"
-              />
-            </PostCardRow>
-            <PostCardRow>
-              <PostCard
-                title="How to do well in real estate, using Cuurve as the aim"
-                excerpt="This is an excerpt of the article"
-                author="Eloka"
-              />
-              <PostCard
-                title="This is the first title"
-                excerpt="This is an excerpt of the article"
-                author="Cuurve Team"
-              />
-              <PostCard
-                title="This is the first title"
-                excerpt="This is an excerpt of the article"
-                author="Eloka Agu"
               />
             </PostCardRow>
           </BlogContent>

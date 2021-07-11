@@ -18,7 +18,7 @@ function index(props) {
               subtitle="Stand out from other sellers and buyers"
               text="We use business information to create tailored premium marketing content, including social assets and automated posting."
               button="Try Cuurve"
-              backgroundImage="https://storage.googleapis.com/cuurveimages/Transfers.jpg"
+              backgroundImage="https://storage.googleapis.com/cuurveimages/build.jpg"
               backgroundPosition="bottom"
             />
             <InfoBanner
@@ -26,15 +26,16 @@ function index(props) {
               subtitle="Attract high quality leads with an intent to purchase"
               text="We use social ads and marketing materials to drive pre-qualified leads to listings in your local area with high conversion potential."
               button="Learn more"
-              backgroundColor="black"
+              backgroundImage="https://storage.googleapis.com/cuurveimages/sculpture.jpg"
+              backgroundPosition="bottom"
             />
             <InfoBanner
               headline="Nurture your leads"
               subtitle="With custom drip funnels and email campaigns"
               text="Share quality content to create business opportunities and establish lasting relationships with prospective buyers and sellers."
               button="Talk to us"
-              backgroundColor="rgb(25, 28, 31)"
-              backgroundPosition="bottom"
+              backgroundImage="https://storage.googleapis.com/cuurveimages/leads.jpg"
+              backgroundPosition="top"
             />
           </AppBody>
         </AppContainer>

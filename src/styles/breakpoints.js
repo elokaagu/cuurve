@@ -9,5 +9,5 @@ export const device = {
   mobile: `(max-width: ${size.mobile})`,
   tablet: `(max-width: ${size.tablet})`,
   laptop: `(max-width: ${size.laptop})`,
-  desktop: `(min-width: ${size.desktop})`,
+  desktop: `(max-width: ${size.desktop})`,
 };

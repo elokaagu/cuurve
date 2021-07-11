@@ -17,6 +17,11 @@ function product(props) {
                 headline="High quality leads delivered straight to your phone"
                 subtitle="No hassle, just ease"
                 button="Learn more"
+                // backgroundImage="https://storage.googleapis.com/cuurveimages/helixblur.jpg"
+                // backgroundPosition="top"
+                subtitleColor="rgb(25, 28, 31)"
+                backgroundColor="whitesmoke"
+                headlineColor="rgb(25, 28, 31)"
               />
               <InfoCard
                 headline="Premium branding and social assets for your listing"
@@ -28,6 +33,10 @@ function product(props) {
               headline="Smart ads"
               subtitle="Bringing social media to life"
               button="Case studies"
+              backgroundImage="https://storage.googleapis.com/cuurveimages/smoke-smart-ads.jpg"
+              backgroundPosition="top"
+              headlineColor="black"
+              subtitleColor="rgb(6, 102, 235)"
             />
             <InfoRow>
               <InfoCard
@@ -39,6 +48,9 @@ function product(props) {
                 headline="Detailed stats on reach and conversion"
                 subtitle="Let your budget do the work, and watch the results"
                 button="Preview"
+                subtitleColor="rgb(25, 28, 31)"
+                backgroundColor="whitesmoke"
+                headlineColor="rgb(25, 28, 31)"
               />
             </InfoRow>
           </AppBody>

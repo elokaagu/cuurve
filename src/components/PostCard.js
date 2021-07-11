@@ -85,5 +85,6 @@ const PostCardText = styled.div`
     color: rgb(139, 149, 158);
     text-align: left;
     padding-bottom: 15px;
+    line-height: 1.6;
   }
 `;

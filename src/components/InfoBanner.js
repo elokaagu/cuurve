@@ -6,12 +6,14 @@ import { device } from "../styles/breakpoints";
 function InfoBanner({
   headline,
   subtitle,
-  text,
   button,
   backgroundImage,
   backgroundColor,
   backgroundPosition,
-  color,
+  headlineColor,
+  buttonColor,
+  text,
+  subtitleColor,
 }) {
   return (
     <InfoContainer
@@ -24,12 +26,28 @@ function InfoBanner({
       }}
     >
       <InfoText>
-        <h1>{headline}</h1>
+        <h1
+          style={{
+            color: `${headlineColor}`,
+          }}
+        >
+          {headline}
+        </h1>
         {subtitle}
-        <p>{text}</p>
+        <p
+          style={{
+            color: `${subtitleColor}`,
+          }}
+        >
+          {text}
+        </p>
       </InfoText>
       <StyledLink to="/start">
-        <InfoButton>
+        <InfoButton
+          style={{
+            backgroundColor: `${buttonColor}`,
+          }}
+        >
           <span>{button}</span>
         </InfoButton>
       </StyledLink>

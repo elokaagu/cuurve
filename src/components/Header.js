@@ -2,43 +2,44 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import { device } from "../styles/breakpoints";
-import Menu from "@material-ui/icons/Menu";
-import { IconButton } from "@material-ui/core";
+import Hamburger from "./Hamburger";
 
 function Header(props) {
   return (
-    <HeaderContainer>
-      <HeaderLeft>
-        {/* <Logo
+    <>
+      <HeaderContainer>
+        <HeaderLeft>
+          {/* <Logo
           src="https://images.ctfassets.net/q5ulk4bp65r7/3TBS4oVkD1ghowTqVQJlqj/2dfd4ea3b623a7c0d8deb2ff445dee9e/Consumer_Wordmark.svg"
           alt="logo"
         /> */}
-        <h1>
-          <StyledLink to="/"> Cuurve</StyledLink>
-        </h1>
-      </HeaderLeft>
-      <HeaderCenter>
-        <HeaderItem>
-          <StyledLink to="/product">Product</StyledLink>
-        </HeaderItem>
-        <HeaderItem>
-          <StyledLink to="/company">Company</StyledLink>
-        </HeaderItem>
-        <HeaderItem>
-          <StyledLink to="/blog">Blog</StyledLink>
-        </HeaderItem>
-      </HeaderCenter>
-      <HeaderRight>
-        <StyledLink to="/start">
-          <HeaderButton>
-            <span>Get started</span>
-          </HeaderButton>
-        </StyledLink>
-        <IconButton>
-          <Menu />
-        </IconButton>
-      </HeaderRight>
-    </HeaderContainer>
+          <h1>
+            <StyledLink to="/"> Cuurve</StyledLink>
+          </h1>
+        </HeaderLeft>
+        <HeaderCenter>
+          <HeaderItem>
+            <StyledLink to="/product">Product</StyledLink>
+          </HeaderItem>
+          <HeaderItem>
+            <StyledLink to="/company">Company</StyledLink>
+          </HeaderItem>
+          <HeaderItem>
+            <StyledLink to="/blog">Blog</StyledLink>
+          </HeaderItem>
+        </HeaderCenter>
+        <HeaderRight>
+          <StyledLink to="/start">
+            <HeaderButton>
+              <span>Get started</span>
+            </HeaderButton>
+          </StyledLink>
+        </HeaderRight>
+        <MobileMenu>
+          <Hamburger />
+        </MobileMenu>
+      </HeaderContainer>
+    </>
   );
 }
 
@@ -48,7 +49,7 @@ const HeaderContainer = styled.div`
   display: flex;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 15;
   align-items: center;
   padding: 25px 25px;
   justify-content: space-evenly;
@@ -74,6 +75,7 @@ const HeaderContainer = styled.div`
 
   h1 {
     cursor: pointer;
+    z-index: 30;
   }
 
   h2 {
@@ -164,5 +166,24 @@ const HeaderButton = styled.button`
 
   @media ${device.mobile} {
     display: none;
+  }
+`;
+
+const MobileMenu = styled.div`
+  @media ${device.desktop} {
+    display: none;
+  }
+
+  @media ${device.laptop} {
+    display: none;
+  }
+
+  @media ${device.tablet} {
+    display: none;
+  }
+
+  @media ${device.mobile} {
+    display: flex;
+    flex-direction: column;
   }
 `;

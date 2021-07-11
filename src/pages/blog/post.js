@@ -2,55 +2,112 @@ import React from "react";
 import styled from "styled-components";
 import Header from "../../components/Header";
 import { Link } from "gatsby";
+import { IconButton } from "@material-ui/core";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import { device } from "../../styles/breakpoints";
 
 function post(props) {
   return (
     <>
-      <title>Blog | Crypto</title>
+      <title>Blog | Cuurve</title>
       <AppContainer>
         <Header />
         <AppBody>
           <PostContainer>
+            <IconButton>
+              <StyledLink to="/blog">
+                <ArrowBackIcon />
+              </StyledLink>
+            </IconButton>
+
             <PostHeader>
-              <h1>Back to the future: Crypto and the Economy</h1>
-              <p>Eloka Agu</p>
+              <h1>Is Tik Tok the future of real estate?</h1>
+              <p>Cuurve Team</p>
             </PostHeader>
-            <FeatureImage src="https://images.unsplash.com/photo-1611606063065-ee7946f0787a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3067&q=80" />
+            <FeatureImage src="https://images.unsplash.com/photo-1611605698323-b1e99cfd37ea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2767&q=80" />
             <PostText>
               <p>
-                You, our amazing customers, are the reason that we do what we
-                do. So we thought it was high time we showed you some love. And
-                what says ‘love’ better than a boat-load of cash? £250,000 to be
-                precise. And you can win it over the next 4 weeks.
+                <b>
+                  We live in a world that is constantly changing. Social media
+                  has reinvented how we communicate about and discover things in
+                  a variety of ways. As a result, social media has radically
+                  shifted the way business is conducted too. Facebook and
+                  instagram are classic channels that marketers have used to a
+                  great degree to generate traffic and gain leads. However,
+                  newer media channels such as TikTok are emerging as the key
+                  value drivers across the ecosystem.
+                </b>
               </p>
 
               <p>
-                So, how do you get your hands on the cash? That’s where Points
-                come in. Each point you earn will get you one entry into the
-                weekly prize draw. Earning Points is easy, too. Take on our
-                in-app challenges and spend with your card and they’ll add up
-                fast. Please note: for now Points is only available in the UK.
+                TikTok is an easy-to-use video creation app that’s available to
+                all users globally for mobile users. The app provides users with
+                different effects, filters, sound bites, and music. It offers
+                various ways for users to create a wide range of videos tailored
+                to any message they wish to get across. Videos can range in
+                length from 15 seconds to 60 seconds long.
               </p>
 
-              <h2>For more information</h2>
+              <h2>What does this mean for real estate agents ?</h2>
 
               <p>
-                So, how do you get your hands on the cash? That’s where Points
-                come in. Each point you earn will get you one entry into the
-                weekly prize draw. Earning Points is easy, too. Take on our
-                in-app challenges and spend with your card and they’ll add up
-                fast. Please note: for now Points is only available in the UK.
+                As for real estate agents, the mobile app features a collection
+                of tools capable of editing and filtering informative
+                advertisement content and reach a broad client base. With
+                TikTok, you don’t need to be a software guru to run the show.
+                Just create a piece of relevant and relatable content and see
+                your business attract new customers.
               </p>
 
               <p>
-                So, how do you get your hands on the cash? That’s where Points
-                come in. Each point you earn will get you one entry into the
-                weekly prize draw. Earning Points is easy, too. Take on our
-                in-app challenges and spend with your card and they’ll add up
-                fast. Please note: for now Points is only available in the UK.
+                There are many reasons why estate agents should brand themselves
+                on TikTok. In the US alone, the app has 14 million active users
+                every month who spend approximately 47 minutes on the app. About
+                50% of the users in the US fall between the age group of 18 and
+                34 years. Additional 20% fall between 35 and 44 years, which is
+                the prime age group of buying homes. Similarly, 37% of the users
+                have a household income of more than $100k, making them the
+                prime target for real estate agents.
+              </p>
+
+              <h2>How should agents use TikTok ?</h2>
+
+              <p>
+                There numerous ways that real estate agents can utilize TikTok
+                to advertise their properties. The simple mobile app can enable
+                you to:
+                <br />
+                <br />
+                <b>Show Your Customers the Interior, and Exterior:</b>
+                <br />
+                <br />
+                TikTok is a platform that uses videos. Real estate agents can
+                use this tool to showcase the designs and transformations of the
+                houses you are selling is a great idea. You can record a short
+                virtual tour of the interior and the exterior of the property
+                and share it on the platform.
+                <br />
+                <br />
+                <b>Networking With Others In the Industry:</b>
+                <br />
+                <br />
+                As a real estate agent, the deeper you network, the more deals,
+                knowledge, and money you make. If you dream of making huge
+                money, connect and follow with reputable real estate TikTok
+                veterans.
+                <br />
+                <br />
+                <b>Offer Your Expertise:</b>
+                <br />
+                <br />
+                As a real estate agent, use TikTok to offer tips and golden
+                hacks in the sector and respond to frequently asked queries.
+              </p>
+              <p>
+                If you'd like to learn more, or have a free strategy call with
+                our team, feel free to reach out to Cuurve and get started.
               </p>
             </PostText>
-            <StyledLink to="/blog">Back</StyledLink>
           </PostContainer>
         </AppBody>
       </AppContainer>
@@ -62,6 +119,10 @@ export default post;
 
 const PostContainer = styled.div`
   padding-bottom: 100px;
+
+  @media ${device.mobile} {
+    width: 300px;
+  }
 `;
 
 const AppContainer = styled.div`
@@ -74,6 +135,7 @@ const AppContainer = styled.div`
   width: 100%;
   border-bottom: none;
   align-items: center;
+  position: relative;
 `;
 
 const AppBody = styled.div`
@@ -101,6 +163,11 @@ const PostHeader = styled.div`
     line-height: 1.217;
     color: rgb(25, 28, 31);
     padding-bottom: 20px;
+
+    @media ${device.mobile} {
+      font-size: 30px;
+      width: 300px;
+    }
   }
 
   p {
@@ -108,6 +175,11 @@ const PostHeader = styled.div`
     font-family: "Basier Circle Medium";
     color: rgb(0, 112, 243);
     padding-bottom: 50px;
+
+    @media ${device.mobile} {
+      font-size: 20px;
+      width: 300px;
+    }
   }
 `;
 
@@ -115,6 +187,10 @@ const FeatureImage = styled.img`
   object-fit: contain;
   width: 700px;
   padding-bottom: 50px;
+
+  @media ${device.mobile} {
+    width: 300px;
+  }
 `;
 
 const PostText = styled.div`
@@ -130,6 +206,10 @@ const PostText = styled.div`
     line-height: 1.5;
     letter-spacing: -0.1rem;
     padding-bottom: 30px;
+
+    @media ${device.mobile} {
+      width: 300px;
+    }
   }
 
   h2 {
@@ -140,6 +220,10 @@ const PostText = styled.div`
     padding-bottom: 50px;
     align-items: left;
     text-align: left;
+
+    @media ${device.mobile} {
+      width: 300px;
+    }
   }
 `;
 

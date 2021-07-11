@@ -129,6 +129,7 @@ const HeroImage = styled.img`
 
   @media ${device.mobile} {
     width: 350px;
+    margin-top: 20px;
   }
 `;
 
@@ -141,18 +142,21 @@ const HeroButton = styled.button`
   border-radius: 20px;
   padding: 20px;
   cursor: pointer;
-
-  span {
-    font-family: "Basier Circle Medium";
-    font-size: 18px;
-  }
+  font-size: 20px;
+  font-family: "Basier Circle Medium";
 
   @media ${device.laptop} {
     width: 50%;
   }
 
   @media ${device.mobile} {
-    width: 50%;
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    span {
+      font-size: 18px;
+      font-family: "Basier Circle Medium";
+    }
   }
 `;
 

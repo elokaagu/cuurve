@@ -10,6 +10,9 @@ function InfoCard({
   backgroundImage,
   backgroundColor,
   backgroundPosition,
+  headlineColor,
+  buttonColor,
+  subtitleColor,
 }) {
   return (
     <InfoContainer
@@ -22,11 +25,27 @@ function InfoCard({
       }}
     >
       <InfoText>
-        <h1>{headline}</h1>
-        <span>{subtitle}</span>
+        <h1
+          style={{
+            color: `${headlineColor}`,
+          }}
+        >
+          {headline}
+        </h1>
+        <span
+          style={{
+            color: `${subtitleColor}`,
+          }}
+        >
+          {subtitle}
+        </span>
       </InfoText>
       <StyledLink to="/start">
-        <InfoButton>
+        <InfoButton
+          style={{
+            backgroundColor: `${buttonColor}`,
+          }}
+        >
           <span>{button}</span>
         </InfoButton>
       </StyledLink>
